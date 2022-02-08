@@ -11,4 +11,8 @@ export const Textarea = styled.textarea`
   border: none;
   outline: none;
   font-size: 24px;
+
+  &:disabled {
+    background-color: transparent;
+  }
 `;
