@@ -5,7 +5,7 @@ interface TextareaFieldProps extends HTMLAttributes<HTMLTextAreaElement> {
   rows?: number;
   cols?: number;
 }
-const TextareaField = ({ rows = 10, cols, ...props }: TextareaFieldProps) => {
+const TextareaField = ({ rows = 5, cols, ...props }: TextareaFieldProps) => {
   return (
     <Container>
       <Textarea rows={rows} cols={cols} {...props} />
