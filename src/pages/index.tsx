@@ -2,7 +2,7 @@ import TextareaField from "../components/Form/TextareaField";
 
 import languagesList from "../assets/languages.json";
 
-import { Container, Wrapper, TranslationGroup, Button } from "./styles";
+import { Container, Wrapper, TranslationGroup, Button, Card } from "./styles";
 import Select from "../components/Form/Select";
 import { FaExchangeAlt } from "react-icons/fa";
 import { ChangeEvent, useEffect, useState } from "react";
@@ -28,8 +28,6 @@ const Homepage = () => {
         languages: languagesArr,
       };
 
-      console.log(params);
-
       try {
         const { data }: AxiosResponse<any> = await getTranslation(params);
         setTranslation(data.responseData.translatedText);
@@ -53,6 +51,7 @@ const Homepage = () => {
 
   return (
     <Container>
+      <Card>Translator</Card>
       <Wrapper>
         <TranslationGroup>
           <Select
