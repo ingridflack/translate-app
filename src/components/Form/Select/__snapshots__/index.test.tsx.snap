@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select/> should render correctly 1`] = `
+<div>
+  <div
+    class="sc-bdvvtL bDCRaq"
+  >
+    <select
+      id="TesteName"
+      name="TesteName"
+      role="combobox"
+    >
+      <option
+        value="value1"
+      >
+        text1
+      </option>
+      <option
+        value="value2"
+      >
+        text2
+      </option>
+    </select>
+  </div>
+</div>
+`;

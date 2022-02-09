@@ -5,7 +5,7 @@ import { Container } from "./styles";
 const Select = ({ name, options, ...props }: SelectProps) => {
   return (
     <Container>
-      <select name={name} id={name} {...props}>
+      <select name={name} id={name} {...props} role="combobox">
         {options.map((option) => (
           <option value={option.value} key={option.value}>
             {option.text}
