@@ -1,16 +1,6 @@
-import { HTMLAttributes } from "react";
+import { SelectProps } from "../../../interfaces/interfaces";
 
 import { Container } from "./styles";
-
-interface SelectProps extends HTMLAttributes<HTMLSelectElement> {
-  name: string;
-  options: SelectOption[];
-}
-
-interface SelectOption {
-  value: string;
-  text: string;
-}
 
 const Select = ({ name, options, ...props }: SelectProps) => {
   return (

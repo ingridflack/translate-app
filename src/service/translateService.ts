@@ -1,23 +1,12 @@
 import axios from "axios";
+import { GetTranslationProps } from "../interfaces/interfaces";
 
 const BASE_URL = "https://api.mymemory.translated.net/";
 
-interface GetTranslationProps {
-  text: string;
-  languages: string[];
-}
-
-export const getTranslation = async (argumentos: GetTranslationProps) => {
-  try {
-    const result = await axios.get(`${BASE_URL}/get`, {
-      params: {
-        q: argumentos.text,
-        langpair: argumentos.languages.join("|"),
-      },
-    });
-
-    console.log(result);
-  } catch (err) {
-    console.log(err);
-  }
-};
+export const getTranslation = async (argumentos: GetTranslationProps) =>
+  axios.get(`${BASE_URL}/get`, {
+    params: {
+      q: argumentos.text,
+      langpair: argumentos.languages.join("|"),
+    },
+  });

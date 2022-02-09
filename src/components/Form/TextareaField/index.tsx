@@ -1,12 +1,6 @@
-import { TextareaHTMLAttributes } from "react";
+import { TextareaFieldProps } from "../../../interfaces/interfaces";
 import { Container, Textarea } from "./styles";
 
-interface TextareaFieldProps
-  extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-  rows?: number;
-  cols?: number;
-  text?: string;
-}
 const TextareaField = ({ rows = 5, cols, ...props }: TextareaFieldProps) => {
   return (
     <Container>
